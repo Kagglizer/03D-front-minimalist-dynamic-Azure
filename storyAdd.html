@@ -13,14 +13,13 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="./js/services.js"></script>
   </head>
   <body>
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="container px-5">
-        <!-- <a class="navbar-brand" href="#!">Kagglizer</a> -->
-        <a class="navbar-brand" href="https://kaggalizer.com">
+          <!-- <a class="navbar-brand" href="#!">Kagglizer</a> -->
+          <a class="navbar-brand" href="https://kaggalizer.com">
           <img
             src="./assets/Kagglizer_small_banner.png"
             alt="Kagglizer Logo"
@@ -51,10 +50,10 @@
               <a class="nav-link" href="pythonFrame.html">Notebook Frame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="aiFrame.html">AI Frame</a>
+              <a class="nav-link" href="aiFrame.html">AI Frame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="storyAdd.html">Edit Steps</a>
+              <a class="nav-link active" href="storyAdd.html">Edit Steps</a>
             </li>
           </ul>
         </div>
@@ -67,7 +66,7 @@
         <div class="col-lg-7"></div>
         <div class="col-lg-12">
           <h5 class="font-weight-light text-center">
-            AI Assistant Frame
+            Step Editing Page
           </h5>
         </div>
       </div>
@@ -76,22 +75,11 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-1">
           <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Problem Content</h4>
+            <div class="card-body">
+              <h6 class="card-title"><strong style="text-decoration: underline;">Step Number and Name</strong></h6>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
               <img src="!#" alt="Problem Image" style="max-width: 100%; max-height: 100%; height: auto;">
-            </div> -->
-            <!-- <div class="card-footer">
-              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 mb-1">
-          <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabrix thru .NET or direct</p>
-            </div> -->
+            </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -100,8 +88,19 @@
         <div class="col-md-4 mb-1">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><strong style="text-decoration: underline;">Chatbot Iframe</strong></h6>
-              <p class="card-text">Chat, chat... Q & A from Azure OpenAI</p>
+              <h6 class="card-title"><strong style="text-decoration: underline;">Step Graphic</strong></h6>
+              <p class="card-text">Coming from Fabrix thru .NET or direct</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4 mb-1">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title"><strong style="text-decoration: underline;">Step Description</strong></h6>
+              <p class="card-text">Coming from OpenAI direct or .NET midtier</p>
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
@@ -113,21 +112,10 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-2">
           <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Problem Content</h4>
+            <div class="card-body">
+              <h6 class="card-title"><strong style="text-decoration: underline;">Step Description Prompt Package</strong></h6>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
-            </div> -->
-            <!-- <div class="card-footer">
-              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabric thru .NET API</p>
-            </div> -->
+            </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -136,10 +124,23 @@
         <div class="col-md-4 mb-2">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><strong style="text-decoration: underline;">Chatbot Control</strong></h6>
+              <h6 class="card-title"><strong style="text-decoration: underline;">Next Step in Tree</strong></h6>
+              <p class="card-text">Coming from Fabric thru .NET API</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title"><strong style="text-decoration: underline;">Step Prompt Controls</strong></h6>
               <!-- <p class="card-text">Chat, chat</p> -->
-              <button id="aiButton1" class="btn btn-success" onclick="changeStuff()">Send</button>
-              <button id="aiButton2" class="btn btn-success" onclick="changeStuff()">Resynch Agents</button>  
+              <button id="addButton1" class="btn btn-success" onclick="changeStuff()">Submit</button>
+              <button id="addButton2" class="btn btn-success" onclick="changeStuff()">View All</button>              
+              <button id="addButton3" class="btn btn-success" onclick="changeStuff()">Previous</button>
+              <button id="addButton4" class="btn btn-success" onclick="changeStuff()">Next</button>   
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>

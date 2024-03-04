@@ -42,16 +42,20 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="https://www.kagglizer.com/">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="https://www.kagglizer.com">About</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Problem Context Frame</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="pythonFrame.html">Python Notebook Frame</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aiFrame.html">AI Assistant Frame</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="https://www.kagglizer.com/aboutus">About</a></li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Problem Frame</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="pythonFrame.html">Notebook Frame</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aiFrame.html">AI Frame</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="storyAdd.html">Edit Steps</a>
+              </li>
           </ul>
         </div>
       </div>
@@ -63,7 +67,7 @@
         <div class="col-lg-7"></div>
         <div class="col-lg-12">
           <h5 class="font-weight-light text-center">
-            Frame of Python Notebook Frame
+            Python Notebook Frame
           </h5>
         </div>
       </div>
@@ -72,11 +76,11 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-1">
           <div class="card h-100">
-            <div class="card-body">
+            <!-- <div class="card-body">
               <h4 class="card-title">Problem Content</h4>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
               <img src="!#" alt="Problem Image" style="max-width: 100%; max-height: 100%; height: auto;">
-            </div>
+            </div> -->
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -85,8 +89,9 @@
         <div class="col-md-4 mb-1">
           <div class="card h-100">
             <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabrix thru .NET or direct</p>
+              <h6 class="card-title"><strong style="text-decoration: underline;">PySpark Notebook</strong></h6>
+              <!-- <p class="card-text">Coming from Fabric thru .NET or direct</p> -->
+              <iframe id="pySparkIFrame" src="./pythonFrameContent.html" frameborder="1"></iframe>
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
@@ -95,10 +100,10 @@
         </div>
         <div class="col-md-4 mb-1">
           <div class="card h-100">
-            <div class="card-body">
+            <!-- <div class="card-body">
               <h4 class="card-title">AI Tutor</h4>
               <p class="card-text">Coming from OpenAI direct or .NET midtier</p>
-            </div>
+            </div> -->
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -109,10 +114,10 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-2">
           <div class="card h-100">
-            <div class="card-body">
+            <!-- <div class="card-body">
               <h4 class="card-title">Problem Content</h4>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
-            </div>
+            </div> -->
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -121,8 +126,10 @@
         <div class="col-md-4 mb-2">
           <div class="card h-100">
             <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabric thru .NET API</p>
+              <h6 class="card-title"><strong style="text-decoration: underline;">PySpark Controls</strong></h6>
+              <p class="card-text">Effect content in PySpark Iframe</p>
+              <button id="changeStuffButton1" class="btn btn-success" onclick="changeStuff()">Change1</button>
+              <button id="changeStuffButton2" class="btn btn-success" onclick="changeStuff()">Change2</button>
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
@@ -131,10 +138,10 @@
         </div>
         <div class="col-md-4 mb-2">
           <div class="card h-100">
-            <div class="card-body">
+            <!-- <div class="card-body">
               <h4 class="card-title">Control Buttons</h2>
               <p class="card-text">Chat, chat</p>
-            </div>
+            </div> -->
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -150,7 +157,7 @@
     <!-- Footer-->
     <footer class="py-5 bg-success">
       <div class="container px-4 px-lg-5">
-        <p class="m-0 text-center text-white">Copyright &copy; Kagglizer 2024</p>
+        <p class="m-0 text-center text-white">No Copyright &copy; Kagglizer 2024</p>
       </div>
     </footer>
     <!-- Bootstrap core JS-->
@@ -158,4 +165,20 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
   </body>
+
+<script>
+
+    const pySparkIFrame = document.getElementById('pySparkIFrame');
+    
+    function changeStuff() {
+      const iframeWindow = pySparkIFrame.contentWindow; 
+      const iframeDocument = pySparkIFrame.contentDocument;
+      console.log(iframeWindow.document);
+      
+      const iframeHeading = iframeDocument.querySelector("h4");
+
+      iframeDocument.body.style.backgroundColor = 'lightblue';
+      iframeHeading.textContent = 'DATA content is changed!';
+    }
+</script>
 </html>

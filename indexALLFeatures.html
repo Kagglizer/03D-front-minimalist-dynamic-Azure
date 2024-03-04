@@ -13,20 +13,20 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="./js/services.js"></script>
   </head>
   <body>
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="container px-5">
-        <!-- <a class="navbar-brand" href="#!">Kagglizer</a> -->
-        <a class="navbar-brand" href="https://kaggalizer.com">
-          <img
-            src="./assets/Kagglizer_small_banner.png"
-            alt="Kagglizer Logo"
-            style="height: 40px"
-          />
-        </a>
+          <!-- <a class="navbar-brand" href="#!">Kagglizer</a> -->
+          <a class="navbar-brand" href="https://kaggalizer.com">
+            <img
+              src="./assets/Kagglizer_small_banner.png"
+              alt="Kagglizer Logo"
+              style="height: 40px"
+            />
+          </a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -43,18 +43,18 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="https://www.kagglizer.com/">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="https://www.kagglizer.com/aboutus">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.kagglizer.com">About</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Problem Frame</a>
+              <a class="nav-link active" href="index.html">Problem Frame</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pythonFrame.html">Notebook Frame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="aiFrame.html">AI Frame</a>
+              <a class="nav-link" href="aiFrame.html">AI Frame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="storyAdd.html">Edit Steps</a>
+              <a class="nav-link" href="storyAdd.html">Edit Problem</a>
             </li>
           </ul>
         </div>
@@ -67,7 +67,7 @@
         <div class="col-lg-7"></div>
         <div class="col-lg-12">
           <h5 class="font-weight-light text-center">
-            AI Assistant Frame
+            Frame of Problem Context Frame
           </h5>
         </div>
       </div>
@@ -76,22 +76,11 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-1">
           <div class="card h-100">
-            <!-- <div class="card-body">
+            <div class="card-body">
               <h4 class="card-title">Problem Content</h4>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
               <img src="!#" alt="Problem Image" style="max-width: 100%; max-height: 100%; height: auto;">
-            </div> -->
-            <!-- <div class="card-footer">
-              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 mb-1">
-          <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabrix thru .NET or direct</p>
-            </div> -->
+            </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -100,8 +89,19 @@
         <div class="col-md-4 mb-1">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><strong style="text-decoration: underline;">Chatbot Iframe</strong></h6>
-              <p class="card-text">Chat, chat... Q & A from Azure OpenAI</p>
+              <h4 class="card-title">Python Notebook</h4>
+              <p class="card-text">Coming from Fabrix thru .NET or direct</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4 mb-1">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">AI Tutor</h4>
+              <p class="card-text">Coming from OpenAI direct or .NET midtier</p>
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
@@ -113,21 +113,10 @@
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-2">
           <div class="card h-100">
-            <!-- <div class="card-body">
+            <div class="card-body">
               <h4 class="card-title">Problem Content</h4>
               <p class="card-text">Coming from SQL thru .NET midtier</p>
-            </div> -->
-            <!-- <div class="card-footer">
-              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="card h-100">
-            <!-- <div class="card-body">
-              <h4 class="card-title">Python Notebook</h4>
-              <p class="card-text">Coming from Fabric thru .NET API</p>
-            </div> -->
+            </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
             </div> -->
@@ -136,10 +125,19 @@
         <div class="col-md-4 mb-2">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title"><strong style="text-decoration: underline;">Chatbot Control</strong></h6>
-              <!-- <p class="card-text">Chat, chat</p> -->
-              <button id="aiButton1" class="btn btn-success" onclick="changeStuff()">Send</button>
-              <button id="aiButton2" class="btn btn-success" onclick="changeStuff()">Resynch Agents</button>  
+              <h4 class="card-title">Python Notebook</h4>
+              <p class="card-text">Coming from Fabric thru .NET API</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Control Buttons</h2>
+              <p class="card-text">Chat, chat</p>
             </div>
             <!-- <div class="card-footer">
               <a class="btn btn-primary btn-sm" href="#!">More Info</a>
